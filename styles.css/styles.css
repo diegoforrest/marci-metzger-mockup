@@ -1034,7 +1034,8 @@ figure {
 
 #partners {
   text-align: center;
-  margin: 3rem 0;
+  margin: 0;
+  padding: 0;
 }
 
 #partners h1 {
@@ -1045,13 +1046,14 @@ figure {
 
 /* Container for logos */
 .partners-wrapper {
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
-  width: max-content; /* shrink to content width */
+  gap: 10rem;
+  width: max-content;
   margin: 0 auto;
-  animation: moveLeftRight 2s ease-in-out infinite alternate;
+  animation: moveLeftRight 1.8s ease-in-out infinite alternate; /* slightly faster */
 }
 
 /* Logo styling */
@@ -1063,8 +1065,379 @@ figure {
 
 /* Keyframes for smooth left-right bounce */
 @keyframes moveLeftRight {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50px); } /* move 50px right, then bounce back */
+  from {
+    transform: translateX(20px); /* start shifted to the right */
+  }
+  to {
+    transform: translateX(-20px); /* move to the left */
+  }
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .partners-wrapper {
+    gap: 1rem; /* much smaller gap */
+    flex-wrap: wrap; /* allow wrapping */
+    animation: moveLeftRight 2s ease-in-out infinite alternate-reverse; /* slightly faster on mobile */
+  }
+
+  .partners-wrapper img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#services {
+  margin: 0;
+  padding: 0;
+  background-color: #161616;
 }
 
 
+.services-title {
+  text-align: center;
+  padding: 5rem 0 1rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem;
+
+}
+
+figure {
+  margin: 0;
+  background-color: #161616;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+figcaption {
+  padding: 1rem;
+}
+
+figcaption h3 {
+  margin-bottom: 0.8rem;
+  color: white;
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+figcaption p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #adadad;
+}
+
+/* Shared base layout for all */
+.services1, .services2, .services3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-template-areas: "img caption";
+  gap: 2rem;
+}
+
+.services1 img, .services2 img, .services3 img {
+  grid-area: img;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services1 figcaption, .services2 figcaption, .services3 figcaption {
+  grid-area: caption;
+}
+
+/* Make them span both columns in the main grid */
+.services1, .services2, .services3 {
+  grid-column: span 2;
+}
+
+/* Desktop override for .services2 to have text first, image second */
+.services2 {
+  grid-template-areas: "caption img";
+}
+
+.call-btn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem auto 2rem auto;
+  padding: 0.6rem 2rem;
+  color: black;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.call-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Mobile layout: always image first, text second */
+@media (max-width: 768px) {
+  figure {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .services-title {
+    padding: 3rem 0 0 1rem;
+  }
+
+  .services1, .services2, .services3 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "caption";
+  }
+
+  .grid-container {
+    gap: 1.5rem; /* smaller gap for mobile */
+  }
+}
+
+.social-icons {
+  margin-top: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  background-color: #161616;
+  padding: 1.5rem 0; /* give some breathing room */
+}
+
+.social-link {
+  color: #161616; /* icon color (dark) */
+  background-color: white; /* white background circle */
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #aaa; /* change circle background on hover */
+  color: white; /* icon turns white */
+}
+
+#contacts {
+  margin: 0;
+  padding: 4rem 2rem;
+  background-image: url("https://foyr.com/learn/wp-content/uploads/2023/04/Industrial-Interior-Design-Style-1024x576.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  color: white;
+  position: relative;
+}
+
+#contacts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+#contacts .contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px; /* bigger for map space */
+  margin: auto;
+  text-align: center; /* center inline content inside */
+}
+
+.contact-text {
+  text-align: center; /* already exists */
+  width: 100%;        /* make sure it spans the container */
+  margin: 0 auto;     /* center it horizontally if needed */
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap; /* mobile friendly */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.contact-form {
+    border-right: 1px solid #333;
+  flex: 1;
+  padding: 2rem;
+  color: #333;
+  min-width: 300px;
+}
+
+.contact-map {
+
+  flex: 1;
+  min-width: 300px;
+  height: auto;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  border: 0;
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: #ff6600;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e05500;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+  .contact-map iframe {
+    min-height: 250px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base footer styles */
+footer {
+  background: #161616;
+  color: #ffffff;
+  padding: 4rem 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 2px solid white;
+  padding-top: 1.5rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social:hover {
+  background-color: white;
+  color: #161616;
+}
+
+/* Media Query for screens 768px and below */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* stack items vertically */
+    align-items: center;
+    width: 90%; /* take more space */
+    padding-top: 1rem;
+  }
+
+  .footer-content p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin: 5px; /* uniform spacing */
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
