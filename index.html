@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marci Metzger Homes - Real Estate Agent, Real Estate, Realtor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css/styles.css">
+    <link rel="icon" type="image/png" href="./images/qt=q_95.ico">
+</head>
+<body>
+<header>
+  <nav class="top-nav">
+    <!-- Burger icon -->
+    <div class="burger" id="burger">☰</div>
+
+    <ul class="nav-left">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">LISTINGS</a></li>
+    </ul>
+
+    <div class="logo">
+      <a href="#">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/blob-6c0c2e0.png/:/rs=w:536,h:167,cg=true,m/cr=w:536,h:167/qt=q:95" alt="Marci Metzger Logo">
+      </a>
+    </div>
+
+    <ul class="nav-right">
+      <li><a href="#">LET'S MOVE</a></li>
+      <li><a href="#">ABOUT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Fullscreen mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close" id="closeMenu">&times;</span>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">LISTINGS</a></li>
+      <li><a href="#">LET'S MOVE</a></li>
+      <li><a href="#">ABOUT US</a></li>
+    </ul>
+  </div>
+</header>
+
+<section id="introduction">
+  <div class="intro-content">
+    <p>MARCI METZGER - THE RIDGE REALTY GROUP</p>
+    <h2>PAHRUMP REALTOR</h2>
+    <button class="intro-btn">Explore</button>
+  </div>
+</section>
+
+
+<section class="search-section">
+  <div class="search-card">
+    <h2>FIND YOUR DREAM HOME</h2>
+
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="location">Location</label>
+          <select id="location" name="location">
+            <option value="" selected hidden></option>
+            <option>California</option>
+            <option>Los Angeles</option>
+            <option>Nevada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select id="type" name="type">
+            <option value="" selected hidden></option>
+            <option>Mansion</option>
+            <option>Vacant Lot</option>
+            <option>Condo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sort">Sort By</label>
+          <select id="sort" name="sort">
+            <option value="" selected hidden></option>
+            <option>Newest</option>
+            <option>Oldest</option>
+            <option>Least Expensive to Most</option>
+            <option>Most Expensive to Least</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- New single row for bedrooms, baths, min, max, search -->
+      <div class="form-row form-row-inline">
+        <div class="form-group">
+          <label for="bedrooms">Bedrooms</label>
+          <select id="bedrooms" name="bedrooms">
+            <option>Any</option>
+            <option>Studio</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bathrooms">Baths</label>
+          <select id="bathrooms" name="bathrooms">
+            <option>Any</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="min-price">Min Price</label>
+          <input type="text" id="min-price" name="min-price" placeholder="$36K">
+        </div>
+
+        <div class="form-group">
+          <label for="max-price">Max Price</label>
+          <input type="text" id="max-price" name="max-price" placeholder="$775K">
+        </div>
+
+        <div class="form-group">
+          <button type="submit">SEARCH NOW</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<section class="featured-section">
+  <div class="featured-header">
+    <h2 class="featured-title">FEATURED PROPERTIES</h2>
+    <div class="nav-links">
+      <span id="prevBtn">PREVIOUS</span> | <span id="nextBtn">NEXT</span>
+    </div>
+  </div>
+
+
+<div class="slider-container">
+  <div class="slider-track">
+    <!-- Card 1 -->
+    <div class="property-card" data-images="
+    https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655,https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:984,h:655,https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG/:/rs=w:984,h:655,https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG/:/rs=w:984,h:655,https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG/:/rs=w:984,h:656,https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG/:/rs=w:984,h:656">
+      <div class="image-container">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655" alt="Property 1">
+        <span class="tag">FOR SALE</span>
+          <button class="explore-btn">Explore</button>
+      </div>
+      <div class="info">
+        <h3>1228 Madison Avenue Unit: 8-FLR</h3>
+        <p>1228 Madison Avenue Unit: 8-FLR, New York City, NY 10128</p>
+        <p>4 BD | 6 BA | 3,999 SQ.FT.</p>
+        <p class="price">$10,250,000</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="property-card" data-images="
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655,
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655,
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655">
+      <div class="image-container">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655" alt="Property 2">
+        <span class="tag">FOR SALE</span>
+          <button class="explore-btn">Explore</button>
+      </div>
+      <div class="info">
+        <h3>561 Broadway Unit: PH-BC</h3>
+        <p>561 Broadway Unit: PH-BC, New York City, NY 10012</p>
+        <p>4 BD | 3 BA | 4,500 SQ.FT.</p>
+        <p class="price">$9,995,000</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="property-card" data-images="
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655,
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655,
+      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655">
+      <div class="image-container">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:984,h:655" alt="Property 3">
+        <span class="tag">FOR SALE</span>
+          <button class="explore-btn">Explore</button>
+      </div>
+      <div class="info">
+        <h3>Luxury Condo Unit</h3>
+        <p>123 Example Street, New York City, NY</p>
+        <p>3 BD | 2 BA | 2,800 SQ.FT.</p>
+        <p class="price">$7,850,000</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-content">
+    <span id="prevImage" class="lightbox-arrow">&#10094;</span>
+    <img src="" alt="Lightbox Image">
+    <span id="nextImage" class="lightbox-arrow">&#10095;</span>
+  </div>
+  <div class="lightbox-thumbs"></div>
+</div>
+
+
+
+    <section id="about">
+        <div class=""></div>
+        <h1>MARCI METZGER</h1>
+        <a href="#"><img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg/:/cr=t:14.65%25,l:0%25,w:100%25,h:66.64%25/rs=w:365,h:365,cg:true"></a>
+        <h2>REALTOR FOR NEARLY 3 DECADES!</h2>
+        <p>206-919-6886</p>
+        <button class="call-btn">CALL NOW</button>
+    </section>
+
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/introduction.js"></script>
+    <script src="./scripts/featured.js"></script>
+</body>
+</html>
