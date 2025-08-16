@@ -193,6 +193,17 @@ body {
   .intro-content p { font-size: 0.9rem; }
 }
 
+@media (max-width: 768px) {
+  #introduction {
+    background-attachment: scroll; 
+  }
+}
+@media (max-width: 480px) {
+  #introduction {
+    background-attachment: scroll; 
+  }
+}
+
 /* Container overlaps hero */
 .search-section {
   position: relative;
@@ -690,7 +701,7 @@ select {
 
 @media (max-width: 768px) {
   .featured-section {
-    margin-top: -21.5rem; 
+    margin-top: -23.5rem; 
     padding: 1rem 2rem;  
     overflow: hidden;
     padding-bottom: 2rem;    
@@ -700,7 +711,7 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20rem;
+    margin-top: 22rem;
     padding: 0 1rem;
     text-align: center;
   }
@@ -856,6 +867,7 @@ select {
   .design {
     min-height: 150px; /* even smaller on mobile */
     padding: 10px;
+      background-attachment: scroll; /* disable parallax */
   }
 
   .design h1 {
