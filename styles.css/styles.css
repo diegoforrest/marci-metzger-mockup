@@ -102,6 +102,11 @@ body {
 .mobile-menu a:hover { color: rgb(130, 108, 108); text-decoration: underline; }
 .mobile-menu .close { position: absolute; top: 20px; right: 30px; font-size: 3rem; cursor: pointer; }
 
+
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* Hero section */
 #introduction {
   position: relative;
@@ -1538,5 +1543,17 @@ footer {
     width: 35px;
     height: 35px;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contacts {
+    background-attachment: scroll; /* disables parallax on tablets and phones */
+  }
+}
+
+@media (max-width: 480px) {
+  #contacts {
+    background-attachment: scroll; /* disables parallax on smaller phones */
   }
 }

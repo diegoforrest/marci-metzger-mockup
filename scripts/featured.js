@@ -37,101 +37,104 @@ window.addEventListener("resize", () => {
 });
 
 // ===== Lightbox =====
-const lightbox = document.querySelector(".lightbox");
-const lightboxImg = lightbox.querySelector("img");
-const closeBtn = document.querySelector(".lightbox-close");
-const featnextBtn = document.getElementById("nextImage");
-const featprevBtn = document.getElementById("prevImage");
-const thumbsContainer = document.querySelector(".lightbox-thumbs");
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".slider-track");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+  const closeBtn = lightbox.querySelector(".lightbox-close");
+  const featNextBtn = document.getElementById("nextImage");
+  const featPrevBtn = document.getElementById("prevImage");
+  const thumbsContainer = document.querySelector(".lightbox-thumbs");
 
-let images = [];
-let currentIndex = 0;
+  let images = [];
+  let currentIndex = 0;
 
-function openLightbox() {
-  buildThumbnails();
-  updateLightboxImage();
-  lightbox.classList.add("active");
-  document.body.classList.add("no-scroll"); // disable scroll
-}
+  function openLightbox() {
+    if (!lightbox || !lightboxImg || !thumbsContainer) return;
+    buildThumbnails();
+    updateLightboxImage();
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden"; // disable scroll
+  }
 
-function closeLightbox() {
-  lightbox.classList.remove("active");
-  lightboxImg.src = "";
-}
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = ""; // restore scroll
+  }
 
-function updateLightboxImage() {
-  if (images[currentIndex]) {
+  function updateLightboxImage() {
+    if (!images.length) return;
     lightboxImg.src = images[currentIndex];
-    document.querySelectorAll(".lightbox-thumbs img").forEach((thumb, idx) => {
+    thumbsContainer.querySelectorAll("img").forEach((thumb, idx) => {
       thumb.classList.toggle("active", idx === currentIndex);
     });
   }
-}
 
-function buildThumbnails() {
-  thumbsContainer.innerHTML = "";
-  images.forEach((imgSrc, idx) => {
-    const thumb = document.createElement("img");
-    thumb.src = imgSrc;
-    thumb.addEventListener("click", () => {
-      currentIndex = idx;
-      updateLightboxImage();
+  function buildThumbnails() {
+    thumbsContainer.innerHTML = "";
+    images.forEach((imgSrc, idx) => {
+      const thumb = document.createElement("img");
+      thumb.src = imgSrc;
+      thumb.addEventListener("click", () => {
+        currentIndex = idx;
+        updateLightboxImage();
+      });
+      thumbsContainer.appendChild(thumb);
     });
-    thumbsContainer.appendChild(thumb);
-  });
-}
+  }
 
-function showNext() {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateLightboxImage();
-}
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightboxImage();
+  }
 
-function showPrev() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateLightboxImage();
-}
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightboxImage();
+  }
 
-// Close lightbox when clicking outside the image
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
+  // Open lightbox when clicking explore buttons
+  document.querySelectorAll(".property-card .explore-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = e.target.closest(".property-card");
+      if (!card) return;
+      const rawImages = card
+        .getAttribute("data-images")
+        .split(",")
+        .map((i) => i.trim())
+        .filter(Boolean);
 
-closeBtn.addEventListener("click", closeLightbox);
-featnextBtn.addEventListener("click", showNext);
-featprevBtn.addEventListener("click", showPrev);
-
-// ===== Open lightbox only when explore-btn is clicked (desktop + mobile) =====
-document.querySelectorAll(".property-card .explore-btn").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent accidental triggers
-
-    const card = e.target.closest(".property-card");
-    const rawImages = card
-      .getAttribute("data-images")
-      .split(",")
-      .map((i) => i.trim())
-      .filter(Boolean);
-
-    validateImageLinks(rawImages).then((validImgs) => {
-      if (!validImgs.length) return;
-      images = validImgs;
-      currentIndex = 0;
-      openLightbox();
+      validateImageLinks(rawImages).then((validImgs) => {
+        if (!validImgs.length) return;
+        images = validImgs;
+        currentIndex = 0;
+        openLightbox();
+      });
     });
   });
-});
 
-// ===== Validate image links =====
-function validateImageLinks(imgList) {
-  return Promise.all(
-    imgList.map(
-      (src) =>
-        new Promise((resolve) => {
-          const img = new Image();
-          img.onload = () => resolve(src);
-          img.onerror = () => resolve(null);
-          img.src = src;
-        })
-    )
-  ).then((res) => res.filter(Boolean));
-}
+  // Close lightbox
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  featNextBtn.addEventListener("click", showNext);
+  featPrevBtn.addEventListener("click", showPrev);
+
+  // Validate images
+  function validateImageLinks(imgList) {
+    return Promise.all(
+      imgList.map(
+        (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(src);
+            img.onerror = () => resolve(null);
+            img.src = src;
+          })
+      )
+    ).then((res) => res.filter(Boolean));
+  }
+});
