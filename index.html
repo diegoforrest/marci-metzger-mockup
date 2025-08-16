@@ -20,7 +20,7 @@
 
     <ul class="nav-left">
       <li><a href="#">HOME</a></li>
-      <li><a href="#">LISTINGS</a></li>
+      <li><a href="#".featured-section">LISTINGS</a></li>
     </ul>
 
     <div class="logo">
@@ -51,7 +51,7 @@
   <div class="intro-content">
     <p>MARCI METZGER - THE RIDGE REALTY GROUP</p>
     <h2>PAHRUMP REALTOR</h2>
-    <button href="#slide-container" class="intro-btn">Explore</button>
+    <button class="intro-btn" onclick="scrollToFeatured()">Explore</button>
   </div>
 </section>
 
@@ -94,7 +94,7 @@
         </div>
       </div>
 
-      <!-- New single row for bedrooms, baths, min, max, search -->
+      
       <div class="form-row form-row-inline">
         <div class="form-group">
           <label for="bedrooms">Bedrooms</label>
@@ -128,7 +128,7 @@
         </div>
 
         <div class="form-group">
-          <button type="submit" class="submit-btn">SEARCH NOW</button>
+          <button class="submit-btn">SEARCH NOW</button>
         </div>
       </div>
     </form>
@@ -145,244 +145,241 @@
   </div>
 
 
-<div class="slider-container">
+<div id="slider"class="slider-container">
   <div class="slider-track">
 
     <!-- Card 1 -->
-    <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+        <div class="property-card" data-images="
+     https://cdn.houseplansservices.com/product/ba85c0b77197e478abcb7d5db867b4d6b45b0cd50b156c90dc3bae697cd0911c/w800x533.jpg?v=12,
+      https://cdn.houseplansservices.com/product/d825bea8842a3da05dbd2c2e278f09193269f507728ef309137fd2c7a35bb5aa/w800x533.jpg?v=12,
+      https://cdn.houseplansservices.com/product/54f9d9c6244b807f5b99de48775d35e495f8078b85db679117ff47a41beb6b79/w800x533.jpg?v=13,
+      https://cdn.houseplansservices.com/product/ff2fd1b4332ba8b715f5d415a6fa2eb94303092d8631f59fa49c0b3d965413ac/w800x533.jpg?v=11,
+      https://cdn.houseplansservices.com/product/ff6945126880bfdc92e46031d83db9768bdc62df2a859d87e162d47befd7aee9/w800x533.jpg?v=11,
+      https://cdn.houseplansservices.com/product/1f375fb2095219adda83808896ee2eb02001abe088ab2b7e1703d4bbbd0c1de0/w800x533.jpg?v=11,
+      https://cdn.houseplansservices.com/product/98e9e5b05afeaa7399e3b74c754106e381e8977e0d3aa04a97115ab7e55d1829/w800x533.jpg?v=11,https://cdn.houseplansservices.com/product/322bf7dc0e101bf862e4ab15b5edf5d83edcc051f3297c6fcdcd65fa5858aefa/w800x533.jpg?v=11">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG" alt="Property 1">
+        <img src="https://cdn.houseplansservices.com/product/ba85c0b77197e478abcb7d5db867b4d6b45b0cd50b156c90dc3bae697cd0911c/w800x533.jpg?v=12" alt="Property 1">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 1</h3>
-        <p>123 Example St, City</p>
-        <p>3 BD | 2 BA</p>
-        <p class="price">$1,000,000</p>
+        <h3>Contemporary House</h3>
+        <p>303 Sample St, City</p>
+        <p>4983 sq ft, 4 bed, 3.5 bath, 2 floor, 3 garage</p>
+        <p class="price">$2,800,000</p>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+   <div class="property-card" data-images="
+      https://cdn.houseplansservices.com/product/1kio6f6h0se9qhsvqdsv7aht3o/w800x533.jpg?v=10,
+      https://cdn.houseplansservices.com/product/s25ki34g1hmj2plqd53sd21690/w800x533.jpg?v=11,
+      https://cdn.houseplansservices.com/product/alj6u6s1im600m17ln2gtgb9pn/w800x533.jpg?v=9,
+     https://cdn.houseplansservices.com/product/macm4nrt6bu4dsoq9f5tdmljt1/w800x533.jpg?v=8,
+      https://cdn.houseplansservices.com/product/rm3jf2u5hopq3a27jilmblqrvn/w800x533.jpg?v=6,
+      https://cdn.houseplansservices.com/product/bf8nskotusl7656ibqp4le0qqs/w800x533.jpg?v=8">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG" alt="Property 2">
+        <img src="https://cdn.houseplansservices.com/product/1kio6f6h0se9qhsvqdsv7aht3o/w800x533.jpg?v=10" alt="Property 7">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 2</h3>
-        <p>456 Sample Rd, City</p>
-        <p>4 BD | 3 BA</p>
-        <p class="price">$1,500,000</p>
+        <h3>Barndominium House</h3>
+        <p>404 Sample Blvd, City</p>
+        <p>2782 sq ft, 4 bed, 3 bath, 2 floor, 4 garage</p>
+        <p class="price">$1,050,000</p>
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+     https://cdn.houseplansservices.com/product/tihcnbs3mh30b96bjqdm35j5ii/w800x533.jpg?v=2,
+      https://cdn.houseplansservices.com/product/fk7a6th1687cum6dagbbjl15hl/w800x533.jpg?v=4,
+     https://cdn.houseplansservices.com/product/fd1ksv51223e09plimm8u3jo7j/w800x533.jpg?v=18,
+      https://cdn.houseplansservices.com/product/f24hsom5hhu1k7fuen3k0fr68h/w800x533.jpg?v=19,
+      https://cdn.houseplansservices.com/product/2mc8r8h98neclhvghvq9vggrkd/w800x533.jpg?v=19,
+      https://cdn.houseplansservices.com/product/pcee12i6nl6jmukts2vgt610gp/w800x533.jpg?v=21">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG" alt="Property 3">
+        <img src="https://cdn.houseplansservices.com/product/tihcnbs3mh30b96bjqdm35j5ii/w800x533.jpg?v=2" alt="Property 8">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 3</h3>
-        <p>789 Example Blvd, City</p>
-        <p>2 BD | 2 BA</p>
-        <p class="price">$900,000</p>
+        <h3>Farmhouse House</h3>
+        <p>505 Example St, City</p>
+        <p>2400 sq ft, 3 bed, 2.5 bath, 1 floor, 3 garage</p>
+        <p class="price">$1,700,000</p>
       </div>
     </div>
 
     <!-- Card 4 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+      https://cdn.houseplansservices.com/product/f5pa9rrt0eaa8oj7q704f08fnd/w800x533.jpg?v=2,
+      https://cdn.houseplansservices.com/product/96qei6i9s8pan0319sp35sjjam/w800x533.jpg?v=3">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG" alt="Property 4">
+        <img src="https://cdn.houseplansservices.com/product/f5pa9rrt0eaa8oj7q704f08fnd/w800x533.jpg?v=2" alt="Property 9">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 4</h3>
-        <p>101 Sample Lane, City</p>
-        <p>5 BD | 4 BA</p>
-        <p class="price">$2,000,000</p>
+        <h3>Traditional House</h3>
+        <p>606 Sample Rd, City</p>
+        <p>1994 sq ft, 4 bed, 4 bath, 1 floor, 0 garage</p>
+        <p class="price">$1,100,000</p>
       </div>
     </div>
 
     <!-- Card 5 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+      https://cdn.houseplansservices.com/product/lj8e8dcq3g9all6d1kag4gku5e/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/kdb175shqtofceg0jdlacekfip/w800x533.JPG?v=14,
+      https://cdn.houseplansservices.com/product/v85v81df5402e1lslupo7chq21/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/anp0jnouo1dq3iohiutoid1qoi/w800x533.JPG?v=18,
+      https://cdn.houseplansservices.com/product/kphrdm1qrrq3l1bviim77r4o3c/w800x533.JPG?v=15,
+      https://cdn.houseplansservices.com/product/1epedpre1nic37q7o1fh9t3g66/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/og9aj9nem070k5hb5tn6sj8fen/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/ob88i2nvvnj0l24piurerkgstf/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/eg2m6v6l0kmcms0n606b1g6oj8/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/r4l0sjo64kqrekehg9sfb7ivb5/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/106ptdq7l5727rv6b4ukhu1hr2/w800x533.JPG?v=11">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG" alt="Property 5">
+        <img src="https://cdn.houseplansservices.com/product/lj8e8dcq3g9all6d1kag4gku5e/w800x533.JPG?v=11" alt="Property 10">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 5</h3>
-        <p>202 Example Ave, City</p>
-        <p>3 BD | 3 BA</p>
-        <p class="price">$1,200,000</p>
+        <h3>Contemporary House</h3>
+        <p>707 Example Lane, City</p>
+        <p>2368 sq ft, 3 bed, 2.5 bath, 2 floor, 2 garage</p>
+        <p class="price">$1,750,000</p>
       </div>
     </div>
 
     <!-- Card 6 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+      https://cdn.houseplansservices.com/product/m64970hlt56aan24kla09aju97/w800x533.jpg?v=9,
+      https://cdn.houseplansservices.com/product/4bk027es0ijsj4h0aria4g9rri/w800x533.jpg?v=10,
+      https://cdn.houseplansservices.com/product/e6bmudnrpcuiriojf2es5uhb2r/w800x533.jpg?v=10,
+      https://cdn.houseplansservices.com/product/5u13100f05po06bntgmig2tn8f/w800x533.jpg?v=10,
+      https://cdn.houseplansservices.com/product/f5squ339qerh7nvcbndhecsc7d/w800x533.jpg?v=11,
+      https://cdn.houseplansservices.com/product/43s9tllm8ogb8dadb8d9kbiikc/w800x533.jpg?v=10">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG" alt="Property 6">
+        <img src="https://cdn.houseplansservices.com/product/m64970hlt56aan24kla09aju97/w800x533.jpg?v=9" alt="Property 11">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 6</h3>
-        <p>303 Sample St, City</p>
-        <p>4 BD | 2 BA</p>
-        <p class="price">$1,800,000</p>
+        <h3>Victorian House</h3>
+        <p>808 Example Ave, City</p>
+        <p>2898 sq ft, 4 bed, 3 bath, 2 floor, 3 garage</p>
+        <p class="price">$1,300,000</p>
       </div>
     </div>
 
     <!-- Card 7 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+      https://cdn.houseplansservices.com/product/q1ki6ia4adag01j62lsodb0opc/w800x533.JPG?v=2,
+      https://cdn.houseplansservices.com/product/55jer796qnd2clhqhpi95q9lef/w800x533.JPG?v=2,
+      https://cdn.houseplansservices.com/product/aoh3utdbuo07slreapcafacu9n/w800x533.JPG?v=2">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG" alt="Property 7">
+        <img src="https://cdn.houseplansservices.com/product/q1ki6ia4adag01j62lsodb0opc/w800x533.JPG?v=2" alt="Property 3">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 7</h3>
-        <p>404 Sample Blvd, City</p>
-        <p>3 BD | 2 BA</p>
-        <p class="price">$950,000</p>
+        <h3>Modern House</h3>
+        <p>789 Example Blvd, City</p>
+        <p>935 sq ft, 3 bed, 2 bath, 1 floor, 0 garage</p>
+        <p class="price">$210,000</p>
       </div>
     </div>
 
     <!-- Card 8 -->
-    <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+   <div class="property-card" data-images="
+      https://cdn.houseplansservices.com/product/vqofscka1iuol402575u3h7njq/w800x533.JPG?v=4,
+      https://cdn.houseplansservices.com/product/jriva7dkrld8qp3t2f2h8401oj/w800x533.JPG?v=6,
+      https://cdn.houseplansservices.com/product/4uj4ul84lpv4tgflv8en8idt19/w800x533.JPG?v=6">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG" alt="Property 8">
+        <img src="https://cdn.houseplansservices.com/product/vqofscka1iuol402575u3h7njq/w800x533.JPG?v=4" alt="Property 4">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 8</h3>
-        <p>505 Example St, City</p>
-        <p>4 BD | 3 BA</p>
-        <p class="price">$1,400,000</p>
+        <h3>Beach House</h3>
+        <p>101 Sample Lane, City</p>
+        <p>935 sq ft, 3 bed, 2 bath, 1 floor, 0 garage</p>
+        <p class="price">$188,000</p>
       </div>
     </div>
 
     <!-- Card 9 -->
-    <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+     <div class="property-card" data-images="
+    https://cdn.houseplansservices.com/product/2bt28je20ovkrmj30pjp4urf22/w800x533.JPG?v=2,
+      https://cdn.houseplansservices.com/product/v1oie12h2r6pbb528obba7vr71/w800x533.JPG?v=2,
+     https://cdn.houseplansservices.com/product/gtapqo14bh3vap9rpkqa00jhva/w800x533.JPG?v=2">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG" alt="Property 9">
+        <img src="https://cdn.houseplansservices.com/product/2bt28je20ovkrmj30pjp4urf22/w800x533.JPG?v=2" alt="Property 2">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 9</h3>
-        <p>606 Sample Rd, City</p>
-        <p>3 BD | 2 BA</p>
-        <p class="price">$1,100,000</p>
+        <h3>Contemporary House</h3>
+        <p>456 Sample Rd, City</p>
+        <p>935 sq ft, 3 bed, 2 bath, 1 floor, 0 garage</p>
+        <p class="price">$241,000</p>
       </div>
     </div>
 
     <!-- Card 10 -->
     <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+      https://cdn.houseplansservices.com/product/lj8e8dcq3g9all6d1kag4gku5e/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/kdb175shqtofceg0jdlacekfip/w800x533.JPG?v=14,
+      https://cdn.houseplansservices.com/product/v85v81df5402e1lslupo7chq21/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/anp0jnouo1dq3iohiutoid1qoi/w800x533.JPG?v=18,
+      https://cdn.houseplansservices.com/product/kphrdm1qrrq3l1bviim77r4o3c/w800x533.JPG?v=15,
+      https://cdn.houseplansservices.com/product/1epedpre1nic37q7o1fh9t3g66/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/og9aj9nem070k5hb5tn6sj8fen/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/ob88i2nvvnj0l24piurerkgstf/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/eg2m6v6l0kmcms0n606b1g6oj8/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/r4l0sjo64kqrekehg9sfb7ivb5/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/106ptdq7l5727rv6b4ukhu1hr2/w800x533.JPG?v=11">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG" alt="Property 10">
+        <img src="https://cdn.houseplansservices.com/product/lj8e8dcq3g9all6d1kag4gku5e/w800x533.JPG?v=11" alt="Property 10">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 10</h3>
+        <h3>Contemporary House</h3>
         <p>707 Example Lane, City</p>
-        <p>4 BD | 3 BA</p>
+        <p>2368 sq ft, 3 bed, 2.5 bath, 2 floor, 2 garage</p>
         <p class="price">$1,750,000</p>
       </div>
     </div>
 
     <!-- Card 11 -->
-    <div class="property-card" data-images="
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG,
-      https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-41.jpg-SMALL.JPG">
+     <div class="property-card" data-images="
+      https://cdn.houseplansservices.com/product/s8571ka503ses80qb3knvjtnh3/w800x533.JPG?v=8,
+     https://cdn.houseplansservices.com/product/qq7f2oa94crdoob3cgloruiae2/w800x533.JPG?v=8,
+      https://cdn.houseplansservices.com/product/smijonme08tts8m1sqd4hi1d58/w800x533.JPG?v=8,
+      https://cdn.houseplansservices.com/product/bs303e03bjumf4kphmb02ue6ip/w800x533.JPG?v=6,
+      https://cdn.houseplansservices.com/product/oi525k9k4gmiapeu18hkreiha2/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/lsj50ks65l6c5t9v7n3fg34uec/w800x533.JPG?v=11,
+      https://cdn.houseplansservices.com/product/otadgfpet99csqk7v4jgol5e3t/w800x533.JPG?v=11">
       <div class="image-container">
-        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG" alt="Property 11">
+        <img src="https://cdn.houseplansservices.com/product/csd0uobed3i6atki2re0aah4gv/w800x533.jpg?v=2" alt="Property 1">
         <span class="tag">FOR SALE</span>
         <button class="explore-btn">Explore</button>
       </div>
       <div class="info">
-        <h3>Property 11</h3>
-        <p>808 Example Ave, City</p>
-        <p>3 BD | 3 BA</p>
-        <p class="price">$1,300,000</p>
+        <h3>Farmhouse House</h3>
+        <p>123 Example St, City</p>
+        <p>2290 sq ft, 3 bed, 2 bath, 1 floor, 2 garage</p>
+        <p class="price">$457,000</p>
       </div>
     </div>
 
   </div>
 </div>
-
-
 
 
 <!-- Lightbox -->
@@ -404,19 +401,19 @@
 
 <section id="sold">
     <h1 class="sold-title">GET IT SOLD</h1> 
- <div class="grid-container">
+ <div class="grid-container-sold">
   <!-- Top Residential Sales -->
-  <figure class="div1">
+  <figure class="div1 figure">
     <img src="https://img1.wsimg.com/isteam/stock/3395/:/cr=t:11.02%25,l:0%25,w:100%25,h:77.95%25/rs=w:600,h:300,cg:true" alt="Top Residential Sales">
-    <figcaption>
+    <figcaption class="figcaption">
       <h3>Top Residential Sales Last 5 Years</h3>
       <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn.</p>
     </figcaption>
   </figure>
 
   <!-- Don't Just List it -->
-  <figure class="div2">
-    <figcaption>
+  <figure class="div2 figure">
+    <figcaption class="figcaption">
       <h3>Don't Just List it...</h3>
       <p>Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer.</p>
     </figcaption>
@@ -424,15 +421,16 @@
   </figure>
 
   <!-- Guide to Buyers -->
-  <figure class="div3">
+  <figure class="div3 figure">
     <img src="https://img1.wsimg.com/isteam/stock/771/:/cr=t:5.36%25,l:1.76%25,w:96.47%25,h:89.29%25/rs=w:600,h:300,cg:true,m" alt="Guide to Buyers">
-    <figcaption>
+    <figcaption class="figcaption">
       <h3>Guide to Buyers</h3>
       <p>Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!</p>
     </figcaption>
   </figure> 
-</div>
-  <button href="#message"class="call-btn">MESSAGE US!</button>
+</div></section>
+
+  <button class="call-btn" onclick="scrollToContacts()">Message Us</button>
 </section>
 
 
@@ -458,10 +456,10 @@
 
 <section id="services">
   <h1 class="services-title">OUR SERVICES</h1> 
-  <div class="grid-container">
+  <div class="grid-container-serv">
     <!-- Service 1 -->
     <figure class="services1">
-      <img src="https://img1.wsimg.com/isteam/stock/12792/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365" alt="Service 1">
+      <img src="https://vestahome.com/cdn/shop/articles/HRES-84.jpg?v=1717100926" alt="Service 1">
       <figcaption>
         <h3>Real Estate Done Right</h3>
         <p>Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!</p>
@@ -474,12 +472,12 @@
         <h3>Commercial & Residential</h3>
         <p>Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put your hard-earned dollars.</p>
       </figcaption>
-      <img src="https://img1.wsimg.com/isteam/stock/43920/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365" alt="Service 2">
+      <img src="https://img.rockwool.com/https%3A%2F%2Fbrandcommunity.rockwool.com%2Fasset%2FzIcWd4_WusJQimp9ZZWr1g?auto=format&s=c7659b14af2f1dc190149a6eeda24d83" alt="Service 2">
     </figure>
 
     <!-- Service 3 -->
     <figure class="services3">
-      <img src="https://img1.wsimg.com/isteam/stock/kayaJdA/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365" alt="Service 3">
+      <img src="https://images.stockcake.com/public/6/6/c/66cdac20-fa4e-4de6-abc9-56a0d6c06fa8_large/team-planning-session-stockcake.jpg" alt="Service 3">
       <figcaption>
         <h3>Rely on Expertise</h3>
         <p>If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.</p>
@@ -497,31 +495,44 @@
 
 <section id="contacts">
   <div class="contact-content">
-    
-            <h2 class="contact-text">CALL OR VISIT</h2>
+    <h2 class="contact-text">CALL OR VISIT</h2>
     <div class="contact-card">
       
-      <!-- Left: Form & Info -->
+      <!-- Left: Contact Form & Info -->
       <div class="contact-form">
-
-        <h3>MARCI METZGER - THE RIDGE REALTY GROUP</h3>
-        <p>3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
-        <p>(206) 919-6886</p>
         
-        <h3>OFFICE HOURS</h3>
-        <details class="open-hours">
-          <summary><strong>Open today</strong> <span class="time">08:00 am – 07:00 pm</span></summary>
-          <div class="dropdown-content">
-            <p>Mon 08:00 am – 07:00 pm</p>
-            <p>Tue 08:00 am – 07:00 pm</p>
-            <p>Wed 08:00 am – 07:00 pm</p>
-            <p>Thu 08:00 am – 07:00 pm</p>
-            <p>Fri 08:00 am – 07:00 pm</p>
-            <p>Sat 08:00 am – 07:00 pm</p>
-            <p>Sun 09:00 am – 05:00 pm</p>
-          </div>
-        </details>
-        <button>Message Us</button>
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3 class="contact-title">MARCI METZGER - THE RIDGE REALTY GROUP</h3>
+          <p class="details">3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+          <p class="details">(206) 919-6886</p>
+          
+          <h3 class="office-hrs">OFFICE HOURS</h3>
+          <details class="open-hours">
+            <summary><strong>Open Daily</strong> <span class="time">08:00 am – 07:00 pm</span></summary>
+            <div class="dropdown-content">
+              <p class="drop-time">Mon 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Tue 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Wed 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Thu 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Fri 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Sat 08:00 am – 07:00 pm</p>
+              <p class="drop-time">Sun 09:00 am – 05:00 pm</p>
+            </div>
+          </details>
+          <button class="contact-btn">Message Us</button>
+        </div>
+
+<!-- Message Form -->
+<div class="message-form">
+  <span class="close-btn">&times;</span> 
+  <h3 class="message-title">Send Message</h3>
+  <input type="text" placeholder="Name" />
+  <input type="text" placeholder="Email" />
+  <textarea placeholder="Tell us about we can do to help you."></textarea>
+  <button type="submit" class="contact-btn">Send</button>
+</div>
+
       </div>
 
       <!-- Right: Google Map -->
@@ -537,6 +548,7 @@
   </div>
 </section>
 
+
 <footer>
   <div class="footer-content">
     <p>Copyright &copy; 2023 Marci METZGER Homes - All Rights Reserved</p>
@@ -551,5 +563,7 @@
 
     <script src="./scripts/nav.js"></script>
     <script src="./scripts/featured.js"></script>
+    <script src="./scripts/contact.js"></script>
+    <script src="./scripts/buttons.js"></script>
 </body>
 </html>

@@ -3,13 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh; 
   font-family: 'Source Sans Pro', arial, sans-serif;
 }
 
-/* Navbar */
+
 .top-nav {
   height: 8rem;
   display: flex;
@@ -147,7 +150,6 @@ body {
   font-size: 1rem;
   background-color: transparent;
   border: 2px solid white;
-  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: none;
@@ -206,7 +208,6 @@ body {
   background: #f8fafc;
   max-width: 1000px;
   width: 90%;
-  border-radius: 1rem;
   padding: 2rem 3rem;
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
@@ -220,7 +221,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Form layout */
+
 form {
   display: grid;
   gap: 1.5rem;
@@ -248,10 +249,9 @@ label {
 select,
 input[type="text"] {
   padding: 0.5rem;
-  border-radius: 0.5rem;
   border: 1px solid #ccc;
   font-size: 0.9rem;
-  font-family: 'Source Sans Pro', Arial, sans-serif; /* Custom font */
+  font-family: 'Source Sans Pro', Arial, sans-serif; 
   font-weight: 400;
   letter-spacing: 0.5px;
   -webkit-appearance: none; /* Remove default browser styling */
@@ -261,18 +261,16 @@ input[type="text"] {
 
 select:hover,
 input[type="text"]:hover {
-  border-radius: 0.5rem; /* Ensure radius is maintained on hover */
   border-color: #999;
 }
 
 select:focus,
 input[type="text"]:focus {
-  border-radius: 0.5rem; /* Ensure radius is maintained on focus */
   outline: none;
   border-color: #666;
 }
 
-/* Custom dropdown arrow and styling */
+/* Custom dropdown*/
 select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23666' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 0.75rem center;
@@ -286,29 +284,23 @@ select:hover {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 }
 
-/* Style the dropdown options with same radius */
+
 select option {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 0.9rem;
   padding: 0.5rem;
   background-color: white;
   color: #333;
-  border-radius: 0.5rem; /* Same radius as select element */
+
 }
 
-/* Style the dropdown container */
-select:focus option {
-  border-radius: 0.5rem;
-}
 
-/* Additional styling for better dropdown appearance */
 select {
   background-color: white;
 }
 
 select option:hover {
   background-color: #f5f5f5;
-  border-radius: 0.5rem;
 }
 
 /* For select dropdown arrow */
@@ -333,7 +325,6 @@ select {
   font-size: 0.8rem;
   background-color: transparent;
   border: 2px solid black;
-  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: none;
@@ -402,7 +393,6 @@ select {
     font-size: 0.6rem;
     background-color: transparent;
     border: 2px solid black;
-    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: none;
@@ -483,11 +473,11 @@ select {
 }
 
 .property-card {
-  flex: 0 0 calc((100% - 80px) / 3); /* 3 cards with 40px padding each side and 20px gap */
+  flex: 0 0 calc((100% - 80px) / 3); 
   position: relative;
 }
 
-/* ---------- Hover overlay effect ---------- */
+
 .image-container {
   position: relative;
 }
@@ -503,7 +493,7 @@ select {
   opacity: 0.4; /* fade image */
 }
 
-/* Tag */
+
 .tag {
   position: absolute;
   top: 0;
@@ -512,21 +502,19 @@ select {
   color: white;
   padding: 0.5rem 0.9rem;
   font-size: 0.75rem;
-  border-radius: 0 0 0 5px;
   z-index: 2;
 }
 
-/* Info */
+
 .info {
   position: absolute;
-  top: 20%; /* default top */
+  top: 20%; 
   left: 50%;
   transform: translateX(-50%);
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 500;
-  border-radius: 20px;
   opacity: 0;
   transition: opacity 0.3s ease, top 0.3s ease;
   z-index: 3;
@@ -542,7 +530,6 @@ select {
   font-size: 1.2rem;
 }
 
-/* Explore button */
 .explore-btn {
   display: flex;
   align-items: center;
@@ -566,7 +553,12 @@ select {
   z-index: 3;
 }
 
-/* Show on hover */
+.explore-btn:hover{
+  color: black;
+  background-color:white;
+}
+
+
 .property-card:hover .info,
 .property-card:hover .explore-btn {
   opacity: 1;
@@ -574,31 +566,46 @@ select {
 
 /* ---------- Lightbox ---------- */
 .lightbox {
-  display: none;
   position: fixed;
-  z-index: 999;
   inset: 0;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.lightbox.active {
   display: flex;
+  justify-content: center; 
+  align-items: center;     
+  flex-direction: column;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
+/* Lightbox active - smooth fade in */
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Lightbox content - scale effect */
 .lightbox-content {
-  position: relative;
   max-width: 80%;
   max-height: 80%;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
 }
+
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
 
 .lightbox-content img {
   max-width: 100%;
   max-height: 100%;
   display: block;
 }
+
 
 .lightbox-close {
   position: absolute;
@@ -608,9 +615,19 @@ select {
   font-size: 40px;
   cursor: pointer;
   z-index: 1000;
+
+  opacity: 0;              
+  transform: scale(0.8);   
+  transition: opacity 4s ease, transform 1.5s ease; /* smooth fade in/out */
 }
 
-/* Arrows */
+/* When lightbox is active */
+.lightbox.active .lightbox-close {
+  opacity: 1;              
+  transform: scale(1);     
+}
+
+
 .lightbox-arrow {
   position: absolute;
   top: 50%;
@@ -622,12 +639,24 @@ select {
   background: rgba(0,0,0,0.5);
   border-radius: 40%;
   user-select: none;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.3s ease;
 }
+
 
 #prevImage { left: -40px; }
 #nextImage { right: -40px; }
 
-/* Thumbnails */
+
+.lightbox.active .lightbox-close,
+.lightbox.active .lightbox-arrow {
+  opacity: 1;
+}
+
+.lightbox-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
 .lightbox-thumbs {
   display: flex;
   gap: 10px;
@@ -662,10 +691,10 @@ select {
 
 @media (max-width: 768px) {
   .featured-section {
-    margin-top: -21.5rem; /* maintain overlap */
-    padding: 1rem 2rem;   /* keep spacing */
+    margin-top: -21.5rem; 
+    padding: 1rem 2rem;  
     overflow: hidden;
-    padding-bottom: 2rem;     /* prevent entire section scroll */
+    padding-bottom: 2rem;    
   }
 
   .featured-header {
@@ -691,15 +720,12 @@ select {
     gap: 10px;
   }
 
- /* Move tag to top-left on mobile */
   .property-card .tag {
     top: 0;
     left: 0;
     right: auto;
-    border-radius: 0 0 5px 0;
   }
 
-  /* Make card clickable */
   .property-card {
     cursor: pointer;
   }
@@ -707,8 +733,8 @@ select {
  .info {
   top: 15%;
   font-size: .8rem;
-    opacity: 0;             /* hidden by default */
-    pointer-events: none;   /* prevent accidental clicks */
+    opacity: 0;             
+    pointer-events: none;   
     transition: opacity 0.3s ease;
   }
 
@@ -717,31 +743,30 @@ select {
     font-size: 1.2em;
   }
 
-  /* Show on hover (if you want) */
   .property-card:hover .info {
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Only slider-track scrolls horizontally */
+
   .slider-track {
     display: flex;
-    flex-wrap: nowrap;       /* single horizontal row */
+    flex-wrap: nowrap;      
     gap: 15px;
-    overflow-x: auto;        /* horizontal scroll only */
-    overflow-y: hidden;      /* prevent vertical scroll */
-    padding-left: 10px;      /* left gap for first card */
-    padding-right: 20px;     /* right gap for last card */
+    overflow-x: auto;        
+    overflow-y: hidden;      
+    padding-left: 10px;      
+    padding-right: 20px;     
     -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
-    scroll-behavior: smooth; /* optional smooth scroll */
+    scroll-behavior: smooth; 
   }
 
   .property-card {
-    flex: 0 0 100%;          /* cards take 80% width each */
-    display: inline-block;   /* inline for horizontal scroll */
+    flex: 0 0 100%;          
+    display: inline-block;   
   }
 
-  /* Optional: hide scrollbar for cleaner look */
+
   .slider-track::-webkit-scrollbar {
     display: none;
   }
@@ -754,7 +779,7 @@ select {
     display: none;
   }
     .lightbox-thumbs img {
-    height: 40px;  /* smaller for mobile */
+    height: 40px;  
   }
 }
 
@@ -857,7 +882,7 @@ select {
   letter-spacing: 2px;
 }
 
-.grid-container {
+.grid-container-sold {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -866,29 +891,30 @@ select {
   padding: 3rem;
 }
 
-figure {
+.figure {
+  
   margin: 0;
   background: white;
   text-align: center;
 }
 
-figure img {
+.figure img {
   width: 100%;
   display: block;
-  border-radius: 5px;
 }
 
-figcaption {
+.figcaption {
   padding: 1rem;
 }
 
-figcaption h3 {
+figure .figcaption h3 {
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  color: black;
 }
 
-figcaption p {
+.figcaption p {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
@@ -937,7 +963,6 @@ figcaption p {
     font-size: 1rem;
     background-color: transparent;
     border: 2px solid black;
-    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: none;
@@ -1104,7 +1129,7 @@ figure {
   color: white;
 }
 
-.grid-container {
+.grid-container-serv {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -1123,7 +1148,6 @@ figure {
 figure img {
   width: 100%;
   display: block;
-  border-radius: 5px;
 }
 
 figcaption {
@@ -1186,7 +1210,6 @@ figcaption p {
   font-size: 1rem;
   background-color: transparent;
   border: 2px solid black;
-  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: none;
@@ -1283,23 +1306,46 @@ figcaption p {
   text-align: center; /* already exists */
   width: 100%;        /* make sure it spans the container */
   margin: 0 auto;     /* center it horizontally if needed */
+  font-size: 1.6rem;
+  padding-bottom: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .contact-card {
   display: flex;
   flex-wrap: wrap; /* mobile friendly */
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  background:white;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .contact-form {
-    border-right: 1px solid #333;
+  border-right: 1px solid #333;
   flex: 1;
   padding: 2rem;
   color: #333;
   min-width: 300px;
+
+}
+
+.contact-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+  color: black;
+}
+
+.contact-form p {
+  font-size: 0.5rem;
+}
+
+.office-hrs {
+  color: black;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
 }
 
 .contact-map {
@@ -1314,11 +1360,7 @@ figcaption p {
   height: 100%;
   min-height: 100%;
   border: 0;
-}
 
-.contact-form h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .contact-form p {
@@ -1327,30 +1369,92 @@ figcaption p {
   margin-bottom: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.deatils {
+  margin-bottom: 1rem;
+}
+
+summary {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-content .drop-time{
+  margin-bottom: 0.5rem;
+}
+
+.contact-btn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0 auto;
+  padding: 0.4rem 3rem;
+  color: black;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.contact-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.contact-btn a{
+  text-decoration: none;
+}
+
+
+.message-form {
+  display: none; /* hidden by default */
+  flex-direction: column;
+}
+
+.message-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1px;
+}
+
+/* Inputs stay full width */
+.message-form input {
   width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* Textarea only controls height, width stays default or inherited */
+.message-form textarea {
+  width: auto;          /* do not expand width */
+  min-width: 100px;     /* optional minimum width */
+  max-width: 100%;      /* optional maximum width */
+  height: 120px;        /* set starting height */
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: none;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;     /* only allow vertical resizing */
 }
 
-.contact-form button {
-  padding: 0.8rem 2rem;
-  border: none;
-  background-color: #ff6600;
-  color: white;
-  font-size: 1rem;
+/* Close X button */
+.close-btn {
+  position: absolute;
+  top: 73px;       /* closer to top border */
+  left: 33.5rem;     /* closer to right border */
+  font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  color: black;
+  transition: color 0.3s ease;
 }
-
-.contact-form button:hover {
-  background-color: #e05500;
-}
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .contact-card {
@@ -1361,21 +1465,22 @@ figcaption p {
   }
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .close-btn {
+    top: 60px;
+    left: 25rem;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+  .close-btn {
+    top: 73px;
+    right: 33px;  /* use right instead of left for fluid layout */
+    left: auto;    /* reset left */
+  }
+}
 
 /* Base footer styles */
 footer {
